@@ -29,4 +29,18 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('app works!');
   }));
+
+  it(`should have as title 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.para).toEqual('Lorem Ipsum is simply dummy text of the printing and typesetting industry.');
+  }));
+
+  it('should render para in a p tag', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('Lorem Ipsum is simply dummy text of the printing and typesetting industry.');
+  }));
+
 });

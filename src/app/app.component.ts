@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  para = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
 }
