@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 6.11.0
+
+dependencies:
+  pre:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+    - cp ./src/environments/environment.ts ./src/environments/environment.dev.ts
