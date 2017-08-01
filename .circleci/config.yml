@@ -6,5 +6,6 @@ jobs:
       - image: circleci/node:6-browsers
     steps:
       - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: npm install
       - run: xvfb-run -a npm run test -- --single-run --no-progress --browser=ChromeNoSandbox
