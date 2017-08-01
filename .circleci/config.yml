@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/tmp
     docker:
-      - image: selenium/node-chrome # circleci/node:6
+      - image: circleci/node:6-browsers
     steps:
       - checkout
       - run: npm install
